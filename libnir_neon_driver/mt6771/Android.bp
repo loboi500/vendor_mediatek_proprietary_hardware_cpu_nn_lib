@@ -1,0 +1,34 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            shared_libs: [
+                "libbase",
+                "liblog",
+                "libcutils",
+            ],
+            srcs: [
+                "arm/libnir_neon_driver.so",
+            ],
+        },
+        arm64: {
+            shared_libs: [
+                "libbase",
+                "liblog",
+                "libcutils",
+            ],
+            srcs: [
+                "arm64/libnir_neon_driver.so",
+            ],
+        },
+    },
+    mtk_brm_platform: "mt6771",
+    mtk_src_path: "vendor/mediatek/proprietary/hardware/cpu_nn",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libnir_neon_driver",
+    owner: "mtk",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+}
+

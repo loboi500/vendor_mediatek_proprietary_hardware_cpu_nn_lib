@@ -1,0 +1,50 @@
+mgvi_cc_prebuilt_library_shared {
+    arch: {
+        arm: {
+            cortex_a55: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a55/libnir_neon_driver.so",
+                ],
+            },
+            cortex_a75: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a75/libnir_neon_driver.so",
+                ],
+            },
+        },
+        arm64: {
+            cortex_a55: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-2a_cortex-a55/libnir_neon_driver.so",
+                ],
+            },
+            cortex_a75: {
+                shared_libs: [
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-a-branchprot_cortex-a75/libnir_neon_driver.so",
+                ],
+            },
+        },
+    },
+    mgvi_brm_platform: "common",
+    mgvi_platforms: [
+        "mt6893",
+    ],
+    mgvi_so_name: "libnir_neon_driver",
+    mgvi_src_path: "vendor/mediatek/proprietary/hardware/cpu_nn",
+    name: "libnir_neon_driver.6893",
+    owner: "mtk",
+    proprietary: true,
+}
+

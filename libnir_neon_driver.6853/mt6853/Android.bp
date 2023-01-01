@@ -1,0 +1,30 @@
+mgvi_cc_prebuilt_library_shared {
+    arch: {
+        arm: {
+            shared_libs: [
+                "liblog",
+            ],
+            srcs: [
+                "arm/libnir_neon_driver.so",
+            ],
+        },
+        arm64: {
+            shared_libs: [
+                "liblog",
+            ],
+            srcs: [
+                "arm64/libnir_neon_driver.so",
+            ],
+        },
+    },
+    mgvi_brm_platform: "mt6853",
+    mgvi_platforms: [
+        "mt6853",
+    ],
+    mgvi_so_name: "libnir_neon_driver",
+    mgvi_src_path: "vendor/mediatek/proprietary/hardware/cpu_nn",
+    name: "libnir_neon_driver.6853",
+    owner: "mtk",
+    proprietary: true,
+}
+
